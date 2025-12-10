@@ -21,3 +21,10 @@ jobs:
 
       - name: Security scan placeholder
         run: echo "Security scans (Trivy/Sonar) will be added here"
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch: {}   # <- add this
